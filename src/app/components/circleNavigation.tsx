@@ -12,7 +12,7 @@ export default function Navigation() {
     let num = 0;
     const deg = 15;
 
-    let elTranform = {
+    const elTranform = {
         rot: 0,   // the rotation 'counter' for the element 'el'
         sca: 1,   // the scale 'counter' for the element 'el'
         rev: 0
