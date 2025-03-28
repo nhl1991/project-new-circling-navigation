@@ -8,7 +8,7 @@ export default function Home() {
   const [isMobile, setIsMobile] = useState<boolean>();
 
   function handleWindowSizeChange() {
-    console.log(window.innerWidth)
+    
     if (window.innerWidth < 768)
       setIsMobile(true);
     else
@@ -16,12 +16,16 @@ export default function Home() {
   }
 
   useEffect(() => {
+    if (window.innerWidth < 768)
+    setIsMobile(true);
+    else
+    setIsMobile(false);
     window.addEventListener('resize', handleWindowSizeChange);
 
     return () => {
       window.removeEventListener('resize', handleWindowSizeChange);
     }
-  }, [isMobile]);
+  }, []);
 
   if (isMobile)
     return (
