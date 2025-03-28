@@ -1,0 +1,42 @@
+[
+  {
+      "id": "github",
+      "href": "https://github.com/",
+      "imgSrc": "/src/github.png"
+  },
+  {
+      "id": "stackoverflow",
+      "href": "https://stackoverflow.com/",
+      "imgSrc": "/src/stackoverflow.png"
+  },
+  {
+      "id": "instagram",
+      "href": "https://www.instagram.com/",
+      "imgSrc": "/src/instagram.png"
+  },
+  {
+      "id": "spotify",
+      "href": "https://open.spotify.com/",
+      "imgSrc": "/src/spotify.webp"
+  },
+  {
+      "id": "facebook",
+      "href": "https://facebook.com/",
+      "imgSrc": "/src/facebook.png"
+  },
+  {
+      "id": "youtube",
+      "href": "https://www.youtube.com/",
+      "imgSrc": "/src/youtube.png"
+  },
+  {
+      "id": "stackblitz",
+      "href": "https://stackblitz.com/",
+      "imgSrc": "/src/stackblitz.webp"
+  },
+  {
+      "id": "google",
+      "href": "https://www.google.com",
+      "imgSrc": "/src/google_logo.webp"
+  }
+]

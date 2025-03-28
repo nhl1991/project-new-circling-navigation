@@ -1,0 +1,34 @@
+@reference "tailwindcss";
+
+.container {
+    @apply w-[300px] h-[300px] rounded-full absolute bg-transparent pointer-events-none;
+}
+
+.item {
+    @apply w-[50px] h-[50px] rounded-full flex items-center justify-center pointer-events-auto;
+
+}
+
+@media (width >=48rem
+
+    /* 768px */
+) {
+    .bg {
+        @apply bg-[url(/background/background.png)] bg-cover bg-no-repeat rounded;
+    }
+    
+    .container {
+        @apply w-[500px] h-[500px] rounded-full absolute bg-transparent pointer-events-none;
+    }
+
+    .item {
+        @apply w-[125px] h-[125px] rounded-full flex items-center justify-center pointer-events-auto;
+
+    }
+}
+
+
+
+.bg {
+    @apply bg-[url(/background/background-m.jpg)] bg-cover bg-no-repeat rounded;
+}
