@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import item from '@/app/lib/items.json'
-import { useState } from 'react';
 
 export default function NavigationMobile() {
     
