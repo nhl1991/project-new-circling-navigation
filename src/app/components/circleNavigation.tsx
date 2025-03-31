@@ -32,12 +32,12 @@ export default function Navigation() {
         }
     }
     return (
-        <div id="ring" className='w-[500px] h-[500px] border-4 border-gray-200 relative rounded-full invisible md:visible' onWheel={handleOnWheel}>
+        <div id="ring" className='w-[500px] h-[500px] border-4 border-gray-200/50 relative rounded-full invisible md:visible' onWheel={handleOnWheel}>
             {
                 Array.from({ length: cirlceCount }).map((__, i) => {
                     return <div key={i} style={{ transform: `rotate(${i * angle}deg)` }} className={styles.container}>
                         <div title='menu' style={{ transform: `rotate(-${i * angle}deg)` }} className={styles.item}>
-                            <Link id={item[i].id} className='w-full h-full z-50 rounded-full flex items-center justify-center border-4 border-transparent hover:border-cyan-300 overflow-hidden' href={item[i].href}>
+                            <Link id={item[i].id} className='w-full h-full z-50 rounded-full flex items-center justify-center border-4 border-transparent hover:border-gray-200/50 hover:bg-gray-200/50 overflow-hidden' href={item[i].href}>
                                 <Image className='w-full h-full object-fit' src={`${item[i].imgSrc}`} width={125} height={125} alt="project" />
                             </Link>
                         </div>
