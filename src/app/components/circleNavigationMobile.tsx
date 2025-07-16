@@ -11,12 +11,12 @@ export default function NavigationMobile() {
 
     return (
         <div id="ring" className={`p-4 grid grid-cols-3 place-items-center bg-slate-400/50 rounded-2xl w-full h-max`} >
-
+        
             {   
                 Array.from({ length: cirlceCount }).map((__, i) => {
                     return <div key={i} className='w-max h-max '>
-                        <div title='menu' className="w-[100px] h-[100px] rounded-full flex items-center justify-center">
-                            <Link id={item[i].id} className='w-full h-full rounded-full flex items-center justify-center border-4 border-transparent hover:border-cyan-300/30 overflow-hidden' href={item[i].href}>
+                        <div title={item[i].id} className="w-[100px] h-[100px] rounded-full flex items-center justify-center">
+                            <Link id={item[i].id} className='w-full h-full rounded-full flex items-center justify-center border-4 border-transparent hover:border-cyan-300/30 overflow-hidden transition-all duration-1000 ease-in-out' href={item[i].href}>
                                 <Image className='w-full h-full object-fit' src={`${item[i].imgSrc}`} width={125} height={125} alt="project" />
                             </Link>
                         </div>

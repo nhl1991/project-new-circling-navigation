@@ -2,13 +2,13 @@
 import { useEffect, useState } from 'react';
 import Navigation from './components/circleNavigation';
 import NavigationMobile from './components/circleNavigationMobile';
+import Description from './components/Description';
 
 export default function Home() {
 
   const [isMobile, setIsMobile] = useState<boolean>();
-
   function handleWindowSizeChange() {
-    
+
     if (window.innerWidth < 768)
       setIsMobile(true);
     else
@@ -17,9 +17,9 @@ export default function Home() {
 
   useEffect(() => {
     if (window.innerWidth < 768)
-    setIsMobile(true);
+      setIsMobile(true);
     else
-    setIsMobile(false);
+      setIsMobile(false);
     window.addEventListener('resize', handleWindowSizeChange);
 
     return () => {
@@ -37,8 +37,9 @@ export default function Home() {
     )
   else
     return (
-      <div className={`w-full h-full flex justify-center items-center bg-[url(/background/background.png)] bg-cover bg-no-repeat rounded`}>
+      <div className='w-max h-[100vh] flex'>
         <Navigation />
+        <Description />
       </div>
     );
 }
