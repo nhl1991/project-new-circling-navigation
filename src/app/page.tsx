@@ -37,7 +37,7 @@ export default function Home() {
     )
   else
     return (
-      <div className='w-max h-[100vh] flex'>
+      <div className='w-max h-[100vh] flex bg-black/90'>
         <Navigation />
         <Description />
       </div>

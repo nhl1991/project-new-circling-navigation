@@ -13,8 +13,8 @@ export default function Description() {
     }
 
     return (
-        <div className='w-[25vw] h-full pl-2 '>
-            <div className="w-full h-full bg-slate-800 rounded-l-2xl">
+        <div className='w-[25vw] h-full py-4'>
+            <div className="w-full h-full bg-white/10 rounded-l-2xl ">
                 <div className='w-full h-max  flex items-center justify-end p-2'>
                     {/* <p className='text-xl px-4 py-1'>{item.id.toUpperCase()}</p> */}
                     <button onClick={onClose}>

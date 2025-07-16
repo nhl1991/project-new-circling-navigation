@@ -23,8 +23,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
- const header = await headers();
- console.log(header.get('user-agent'))
+//  const header = await headers();
+//  console.log(header.get('user-agent'))
 
   return (
     <html lang="en">

@@ -23,7 +23,7 @@ export default function Navigation() {
 
     const handleOnWheel: React.WheelEventHandler<HTMLDivElement> = (e) => {
         if (!ringRef || !ringRef.current) return;
-        if(!smallRingRef || !smallRingRef.current) return;
+        if (!smallRingRef || !smallRingRef.current) return;
 
 
         // const circles = document.querySelectorAll('#ring div div');
@@ -38,8 +38,8 @@ export default function Navigation() {
             // (circles[i] as HTMLElement).style.transform = `rotate(${value}deg)`
         }
     }
-// React.MouseEventHandler<HTMLAnchorElement>
-    const onClick = (e:React.MouseEvent<HTMLAnchorElement>, item:Item) => {
+    // React.MouseEventHandler<HTMLAnchorElement>
+    const onClick = (e: React.MouseEvent<HTMLAnchorElement>, item: Item) => {
         e.preventDefault();
 
         setRotation(elTranform.rot) //To prevent re-render, store the current value when user clicks the item.
@@ -53,21 +53,23 @@ export default function Navigation() {
 
     return (
 
-        <div className={`w-[100vw] h-[100vh] flex justify-center items-center bg-black relative`}>
-            <div className='w-max h-max relative'>
-                <div id="ring" className='w-[500px] h-[500px] border-4 border-white/10 rounded-full invisible md:visible relative' onWheel={handleOnWheel} ref={ringRef}>
+        <div className={`w-screen h-screen p-4`}>
+            <div className='w-full h-full flex justify-center items-center relative bg-white/10 rounded-2xl'>
+                <div className='w-max h-max relative '>
+                    <div id="ring" className='w-[500px] h-[500px] border-4 border-white/10 rounded-full invisible md:visible relative' onWheel={handleOnWheel} ref={ringRef}>
 
-                    {
-                        Array.from({ length: cirlceCount }).map((__, i) => {
-                            return <div key={i} style={{ transform: `rotate(${i * angle}deg)` }} className={styles.container}>
-                                <div title='menu' style={{ transform: `rotate(-${i * angle}deg)` }} className={styles.item} ref={(el)=> {if(el) smallRingRef.current[i] = el;}}>
-                                    <Link id={item[i].id} className='w-full h-full z-50 rounded-full flex items-center justify-center border-4 border-transparent hover:border-gray-200/50 hover:bg-gray-200/50 overflow-hidden relative' href={item[i].href} onClick={(e)=> {onClick(e,item[i])}} >
-                                        <Image className='w-full h-full object-cover bg-white/60' fill sizes='(min-width: 125px, min-height: 125px) 100vw, (min-width: 60px, min-height: 60px) 50vw' src={`${item[i].imgSrc}`} alt="project" />
-                                    </Link>
+                        {
+                            Array.from({ length: cirlceCount }).map((__, i) => {
+                                return <div key={i} style={{ transform: `rotate(${i * angle}deg)` }} className={styles.container}>
+                                    <div title='menu' style={{ transform: `rotate(-${i * angle}deg)` }} className={styles.item} ref={(el) => { if (el) smallRingRef.current[i] = el; }}>
+                                        <Link id={item[i].id} className='w-full h-full z-50 rounded-full flex items-center justify-center border-4 border-transparent hover:border-white  overflow-hidden relative' href={item[i].href} onClick={(e) => { onClick(e, item[i]) }} >
+                                            <Image className='w-full h-full object-cover bg-white/10' fill sizes='(min-width: 125px, min-height: 125px) 100vw, (min-width: 60px, min-height: 60px) 50vw' src={`${item[i].imgSrc}`} alt="project" />
+                                        </Link>
+                                    </div>
                                 </div>
-                            </div>
-                        })
-                    }
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </div>
