@@ -54,7 +54,7 @@ export default function Navigation() {
     return (
 
         <div className={`w-screen h-screen p-4`}>
-            <div className='w-full h-full flex justify-center items-center relative bg-white/10 rounded-2xl'>
+            <div className='w-full h-full flex justify-center items-center relative linear-gradation-bg rounded-2xl'>
                 <div className='w-max h-max relative '>
                     <div id="ring" className='w-[500px] h-[500px] border-4 border-white/10 rounded-full invisible md:visible relative' onWheel={handleOnWheel} ref={ringRef}>
 
